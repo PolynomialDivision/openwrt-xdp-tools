@@ -11,7 +11,6 @@ PKG_RELEASE:=1
 PKG_SOURCE_PROTO:=git
 PKG_SOURCE_URL:=https://github.com/xdp-project/xdp-tools.git
 PKG_SOURCE_VERSION:=7cad843311bc1d67ab0dc730ae1ef97a7040b9d5
-PKG_MIRROR_HASH:=skip
 
 PKG_MAINTAINER:=Nick Hainke <vincent@systemli.org>
 PKG_LICENSE:=GPL-2.0-only
@@ -41,3 +40,4 @@ define Package/xdp-tools/install
 endef
 
 $(eval $(call BuildPackage,xdp-tools))
+
