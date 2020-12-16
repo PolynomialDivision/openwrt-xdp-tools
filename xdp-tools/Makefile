@@ -10,7 +10,7 @@ PKG_RELEASE:=1
 
 PKG_SOURCE_PROTO:=git
 PKG_SOURCE_URL:=https://github.com/xdp-project/xdp-tools.git
-PKG_SOURCE_VERSION:=7cad843311bc1d67ab0dc730ae1ef97a7040b9d5
+PKG_SOURCE_VERSION:=d6a564115c7d05aa81e5e327c20d4b453a327f37
 
 PKG_MAINTAINER:=Nick Hainke <vincent@systemli.org>
 PKG_LICENSE:=GPL-2.0-only
