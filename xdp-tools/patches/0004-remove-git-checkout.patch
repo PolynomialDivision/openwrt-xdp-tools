@@ -1,6 +1,6 @@
 --- a/configure
 +++ b/configure
-@@ -223,9 +223,9 @@ EOF
+@@ -225,9 +225,9 @@ EOF
      echo 'LDFLAGS += -L$(LIB_DIR)/libbpf/src' >>$CONFIG
      echo 'LDLIBS += -l:libbpf.a' >>$CONFIG
      echo 'OBJECT_LIBBPF = $(LIB_DIR)/libbpf/src/libbpf.a' >>$CONFIG
