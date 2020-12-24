@@ -42,8 +42,11 @@ CONFIGURE_VARS+= \
 else
 CONFIGURE_VARS+= \
 	BPF_TARGET=bpfel
-	UTILS+=xdp-ip-stats
+	
 endif
+
+MAKE_FLAGS+= \
+	UTILS+=xdp-ip-stats
 
 define Package/xdp-tools/install
 	$(INSTALL_DIR) $(1)/usr/bin
