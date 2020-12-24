@@ -46,7 +46,7 @@ CONFIGURE_VARS+= \
 endif
 
 MAKE_FLAGS+= \
-	UTILS+=xdp-ip-stats
+	UTILS=$(TARGET_UTILS) xdp-ip-stats
 
 define Package/xdp-tools/install
 	$(INSTALL_DIR) $(1)/usr/bin
