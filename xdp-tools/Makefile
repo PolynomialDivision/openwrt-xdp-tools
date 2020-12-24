@@ -36,6 +36,14 @@ endef
 TARGET_CPPFLAGS+=-I$(STAGING_DIR)/usr/include -I$(STAGING_DIR)/include
 TARGET_LDFLAGS+=-L$(STAGING_DIR)/usr/lib -L$(STAGING_DIR)/lib
 
+ifeq ($(CONFIG_BIG_ENDIAN),y)
+CONFIGURE_VARS+= \
+	BPF_TARGET=bpfeb
+else
+CONFIGURE_VARS+= \
+	BPF_TARGET=bpfel
+endif
+
 define Package/xdp-tools/install
 	$(INSTALL_DIR) $(1)/usr/bin
 	$(INSTALL_BIN) $(PKG_BUILD_DIR)/xdp-loader/xdp-loader $(1)/usr/bin/xdp-loader
