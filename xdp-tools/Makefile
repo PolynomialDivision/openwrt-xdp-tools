@@ -32,7 +32,6 @@ define Package/xdp-tools/description
   Load xdp scripts into kernel.
 endef
 
-
 TARGET_CPPFLAGS+=-I$(STAGING_DIR)/usr/include -I$(STAGING_DIR)/include
 TARGET_LDFLAGS+=-L$(STAGING_DIR)/usr/lib -L$(STAGING_DIR)/lib
 
@@ -42,11 +41,10 @@ CONFIGURE_VARS+= \
 else
 CONFIGURE_VARS+= \
 	BPF_TARGET=bpfel
-	
 endif
 
-MAKE_FLAGS+= \
-	UTILS=$(TARGET_UTILS) xdp-ip-stats
+MAKE_FLAGS += \
+	UTILS="xdp-filter xdp-loader xdp-dump xdp-ip-stats"
 
 define Package/xdp-tools/install
 	$(INSTALL_DIR) $(1)/usr/bin
